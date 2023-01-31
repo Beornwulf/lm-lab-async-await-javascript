@@ -13,6 +13,16 @@ const promise = new Promise((resolve, reject) => {
 
 // Your solution(s) to exercise001 here!
 
-promise
-	.then(result => console.log(`Yay! Promise resolved with response: ${result}`))
-	.catch(reason => console.log(`Boo. Promise rejected with response: ${reason}`));
+// promise
+// 	.then(result => console.log(`Yay! Promise resolved with response: ${result}`))
+// 	.catch(reason => console.log(`Boo. Promise rejected with response: ${reason}`));
+
+const getPromiseResponse = async () => {
+	try {
+		const result = await promise;
+		console.log(`Yay! Promise resolved with response: ${result}`)
+	} catch (error) {
+		console.log(`Boo. Promise rejected with response: ${error}`)
+	}
+}
+getPromiseResponse();
